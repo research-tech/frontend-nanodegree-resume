@@ -6,4 +6,5 @@ console.log(funThoughts);
 $('#main').append(funThoughts);
 var formattedName = HTMLheaderName.replace("%data%", name);
 var formattedRole = HTMLheaderRole.replace("%data%", role);
-$("#header").append(formattedName).append(formattedRole);
+// $("#header").append(formattedName).append(formattedRole);
+$("#header").append(formattedRole).prepend(formattedName);
