@@ -23,12 +23,8 @@ var incrementLastArrayElement = function(_array) {
 
     // Your code goes in here!
 
-    for (i=0; i<_array.length-1; i++){
-        newArray[i]=_array[i];
-    }
-    newArray[_array.length-1]=_array[_array.length-1]+1;
-
-
+    newArray=_array.slice(0);
+    newArray.push(newArray.pop()+1);
     // Don't delete this line!
     return newArray;
 };
