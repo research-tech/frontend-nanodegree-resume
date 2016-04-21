@@ -1,4 +1,5 @@
 var name="Ruthie Princess Fields";
-$("#main").append(name);
 var awesomethoughts="I am " +name +" and I am awesome.";
-console.log(awesomethoughts);
+var funThoughts=awesomethoughts.replace("awesome", "fun");
+console.log(funThoughts);
+$('#main').append(funThoughts);
