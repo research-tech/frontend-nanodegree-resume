@@ -9,25 +9,20 @@
 // // $("#header").append(formattedName).append(formattedRole);
 // $("#header").prepend(formattedRole).prepend(formattedName);
 
-var sampleArray = [0,0,7];
+var name = "AlbERt EINstEiN";
 
-var incrementLastArrayElement = function(_array) {
-    var newArray = [];
-    // Your code should make newArray equal to an array that has the same
-    // values as _array, but the last number has increased by one.
-
-    // For example:
-    // _array = [1, 2, 3];
-    // turns into:
-    // newArray = [1, 2, 4];
-
-    // Your code goes in here!
-
-    newArray=_array.slice(0);
-    newArray.push(newArray.pop()+1);
+function nameChanger(oldName) {
+    //split the name into a first name and a last name
+    nameArray = oldName.split(" ");
+    var firstName = nameArray[0];
+    var lastName = nameArray[1];
+    //change the first char of firstName to capital and leave the rest lower case
+    firstName = firstName.charAt(0).toUpperCase()+firstName.slice(1).toLowerCase();
+    //add the processed first name with the all caps last name
+    finalName = firstName + " " + lastName.toUpperCase();
     // Don't delete this line!
-    return newArray;
-};
+    return finalName;
+}
 
 // Did your code work? The line below will tell you!
-console.log(incrementLastArrayElement(sampleArray));
+console.log(nameChanger(name));
